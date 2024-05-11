@@ -24,6 +24,8 @@
 await channel.subscribe((msg) => {
   console.log("Received: " + JSON.stringify(msg.data));
 });
+
+await channel.publish("update", { team: "Liverpool Fc" });
 }
 
 doPubSub();
